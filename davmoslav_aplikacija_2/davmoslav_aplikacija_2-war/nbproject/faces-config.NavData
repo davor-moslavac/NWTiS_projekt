@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="login.xhtml" x="144" y="492" zoom="true"/>
+        <Node id="zasticeno/pregledPoruke.xhtml" x="377" y="34" zoom="true"/>
+        <Node id="zasticeno/emailPostavke.xhtml" x="93" y="340" zoom="true"/>
+        <Node id="index.xhtml" x="220" y="623" zoom="true"/>
+        <Node id="zasticeno/korisnickiProfil.xhtml" x="680" y="90" zoom="true"/>
+        <Node id="registracija.xhtml" x="325" y="492" zoom="false"/>
+        <Node id="sveAdrese.xhtml" x="556" y="492" zoom="true"/>
+        <Node id="zasticeno/pregledSvihPoruka.xhtml" x="110" y="114" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

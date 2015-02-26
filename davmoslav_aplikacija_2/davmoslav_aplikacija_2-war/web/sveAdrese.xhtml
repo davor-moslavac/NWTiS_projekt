@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view locale="#{lokalizacija.vazecaLokalizacija}">    
+
+        <h:head>
+            <title>#{i18n.sveadrese_naslov}</title>
+        </h:head>
+        <h:body>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:link rendered="#{!pregledAdresa.ulogiran}" outcome="prijava" value="#{i18n.sveadrese_prijava}"></h:link>
+                    <h:link rendered="#{!pregledAdresa.ulogiran}" outcome="registracija" value="#{i18n.sveadrese_registracija}"></h:link>
+                    <h:link onclick="#{facesContext.externalContext.invalidateSession()}" >#{i18n.odjava}</h:link>
+                    <h:link rendered="#{pregledAdresa.ulogiran}" outcome="sveAdrese" value="#{i18n.provjera_adresa}"></h:link>
+                </h:panelGrid>
+
+                <p:selectOneListbox value="#{pregledAdresa.odabranaAdrese}" style="height:150px;width:200px">
+                    <f:selectItems value="#{pregledAdresa.adrese}"/>
+                </p:selectOneListbox>
+
+                <label>#{i18n.sveAdrese_ZadnjihN}</label> <p:inputText value="#{pregledAdresa.zadnjihNPodataka}"/><br/>
+                <p:outputLabel for="datetime" value="#{i18n.sveAdrese_vrijemeOd}" />
+                <p:calendar id="datetime" value="#{pregledAdresa.date}" pattern="yyyy-MM-dd HH:mm:ss" />
+                <p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
+                    <p:panelGrid id="display">
+                        <h:outputText value="#{i18n.sveAdrese_vrijemeOd}" />
+                        <h:outputText value="#{pregledAdresa.vrijemeOd}"/>
+                    </p:panelGrid>
+                </p:dialog><br/>
+
+                <p:outputLabel for="datetime2" value="#{i18n.sveAdrese_vrijemeDo}" />
+                <p:calendar id="datetime2" value="#{pregledAdresa.date2}" pattern="yyyy-MM-dd HH:mm:ss" />
+                <p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
+                    <p:panelGrid id="display2">
+                        <h:outputText value="#{i18n.sveAdrese_vrijemeDo}" />
+                        <h:outputText value="#{pregledAdresa.vrijemeDo}"/>
+                    </p:panelGrid>
+                </p:dialog><br/>
+                <p:commandButton value="#{i18n.sveAdrese_PreuzmiPodatke}" action="#{pregledAdresa.preuzmiMeteoPodatke()}" update="podaci"/>
+
+
+                <p:dataTable value="#{pregledAdresa.sviPodaci}" var="mm" id="podaci" paginator="true" rows="10">
+                    <f:facet name="header">
+                        #{i18n.sveAdrese_MeteoPodaci} #{pregledAdresa.odabranaAdrese}
+                    </f:facet>
+                    <p:column headerText="#{i18n.sveAdrese_sirina}" >
+                        <h:outputText value="#{mm.latitude}"/>
+                    </p:column>
+                    <p:column headerText="#{i18n.sveAdrese_duljina}" >
+                        <h:outputText value="#{mm.longitude}"/>
+                    </p:column>
+                    <p:column headerText="#{i18n.sveAdrese_temperatura}" >
+                        <h:outputText value="#{mm.temperature}"/>
+                    </p:column>   
+                    <p:column headerText="#{i18n.sveAdrese_vlaga}" >
+                        <h:outputText value="#{mm.humidity}"/>
+                    </p:column>   
+                    <p:column headerText="#{i18n.sveAdrese_brzinaVjetra}" >
+                        <h:outputText value="#{mm.windSpeed}"/>
+                    </p:column>  
+                    <p:column headerText="#{i18n.sveAdrese_snijeg}" >
+                        <h:outputText value="#{mm.snowDaily}"/>
+                    </p:column>   
+                    <p:column headerText="#{i18n.sveAdrese_kisa}" >
+                        <h:outputText value="#{mm.rainDaily}"/>
+                    </p:column>
+                    <p:column headerText="#{i18n.sveAdrese_vrijeme}" >
+                        <h:outputText value="#{mm.rainDaily}"/>
+                    </p:column>   
+                </p:dataTable>
+            </h:form>
+            <br></br>
+            <h:link outcome="odabirJezika" value="#{i18n.index_odaberi_jezik}"/> 
+        </h:body>
+    </f:view>
+</html>
+

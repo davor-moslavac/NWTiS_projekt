@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>NWTIS konfiguracija</comment>
+    <entry key="interval">600</entry>
+    <entry key="port">8001</entry>
+    <entry key="adresaServera">nwtis.nastava.foi.hr</entry>
+    <entry key="saljePoruku">meteo@nwtis.nastava.foi.hr</entry>
+    <entry key="primaPoruku">admin@nwtis.nastava.foi.hr</entry>
+    <entry key="predmetPoruke">NWTiS_meteo</entry>
+    
+    <entry key="cKey">9l8plLtwdJ4GiUoTm021oLn7G9dks7bq</entry>
+    <entry key="sKey">9AAOGJOO6GD7LYiC</entry>  
+</properties>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Konfiguracija</comment>
+<entry key="interval">30</entry>
+<entry key="email_posluzitelj">localhost</entry>
+<entry key="email_port">143</entry>
+<entry key="korisnicko_ime">admin@nwtis.nastava.foi.hr</entry>
+<entry key="korisnicka_lozinka">123456</entry>
+<entry key="predmet">NWTiS</entry>
+<entry key="paginator">10</entry>
+<entry key="ispravnoFolder">nwtis_ispravno</entry>
+<entry key="neispravnoFolder">nwtis_neispravno</entry>
+<entry key="ostaloFolder">nwtis_ostalo</entry>
+<entry key="galerija">nwtis_galerija</entry>
+</properties>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view locale="#{lokalizacija.vazecaLokalizacija}">    
+        <h:head>
+            <title>#{i18n.korisnickiprofil_naslov}</title>
+        </h:head>
+        <h:body>
+            <h1>#{i18n.korisnickiprofil_naslov}</h1>
+            <h:link rendered="#{pregledAdresa.ulogiran}" outcome="emailPostavke" value="#{i18n.pregledSvihPoruka_postavke}"></h:link>
+            <h:form>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+
